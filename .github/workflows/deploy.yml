@@ -20,7 +20,7 @@ jobs:
         dotnet-version: '8.0.x'
 
     - name: Build and publish
-      run: dotnet publish -c Release -o out
+      run: dotnet publish DevOpsDemoApp.csproj -c Release -o out
 
     - name: Copy files to EC2
       uses: appleboy/scp-action@v0.1.7
